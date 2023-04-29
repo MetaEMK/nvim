@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
 -- })
 
 -- use ('Mofiqul/dracula.nvim')
+use ('simrat39/symbols-outline.nvim')
 use ('folke/tokyonight.nvim')
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
