@@ -86,4 +86,5 @@ use {
 }
 
 use('RRethy/vim-illuminate')
+use ('nvim-treesitter/nvim-treesitter-context')
 end)
