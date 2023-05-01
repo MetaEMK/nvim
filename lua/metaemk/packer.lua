@@ -86,5 +86,13 @@ use {
 }
 
 use('RRethy/vim-illuminate')
+
 use ('nvim-treesitter/nvim-treesitter-context')
+
+use {
+    'stevearc/aerial.nvim',
+    config = function() require('aerial').setup() end
+}
+
+
 end)

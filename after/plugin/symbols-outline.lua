@@ -1,17 +1,16 @@
-require("symbols-outline").setup(opts)
 local opts = {
   highlight_hovered_item = true,
-  show_guides = true,
-  auto_preview = true,
+  show_guides = false,
+  auto_preview = false,
   position = 'right',
   relative_width = true,
   width = 25,
-  auto_close = false,
+  auto_close = true,
   show_numbers = true,
   show_relative_numbers = true,
   show_symbol_details = true,
   preview_bg_highlight = 'Pmenu',
-  autofold_depth = 1,
+  autofold_depth = 2,
   auto_unfold_hover = true,
   fold_markers = { '', '' },
   wrap = true,
@@ -19,8 +18,8 @@ local opts = {
     close = {"<Esc>", "q"},
     goto_location = "<Cr>",
     focus_location = "o",
-    hover_symbol = "<C-space>",
-    toggle_preview = "K",
+    hover_symbol = "K",
+    toggle_preview = "<C-space>",
     rename_symbol = "r",
     code_actions = "a",
     fold = "h",
@@ -62,3 +61,5 @@ local opts = {
     Fragment = { icon = "", hl = "@constant" },
   },
 }
+
+require("symbols-outline").setup(opts)
