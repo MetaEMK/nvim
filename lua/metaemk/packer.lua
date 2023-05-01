@@ -85,4 +85,5 @@ use {
   end
 }
 
+use('RRethy/vim-illuminate')
 end)
