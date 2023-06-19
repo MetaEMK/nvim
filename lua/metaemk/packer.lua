@@ -84,5 +84,9 @@ use {
     config = function() require('aerial').setup() end
 }
 
+use { 'nvim-lualine/lualine.nvim' }
+
+use 'nvim-tree/nvim-web-devicons'
+
 
 end)
