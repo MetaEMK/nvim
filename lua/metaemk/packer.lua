@@ -88,5 +88,6 @@ use { 'nvim-lualine/lualine.nvim' }
 
 use 'nvim-tree/nvim-web-devicons'
 
+use "lukas-reineke/indent-blankline.nvim"
 
 end)
