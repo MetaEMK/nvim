@@ -90,4 +90,10 @@ use 'nvim-tree/nvim-web-devicons'
 
 use "lukas-reineke/indent-blankline.nvim"
 
+use {
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+}
+
+
 end)
