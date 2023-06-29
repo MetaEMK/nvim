@@ -18,5 +18,5 @@ see install documentation: https://github.com/jesseduffield/lazygit#installation
 2. open nvim and press space or enter to continue
 3. go in nvim to 2. open nvim and press space or enter to continue
 4. go in nvim to lua / metaemk / packer.lua
-5. ':so' and ':PackerSync'
+5. `:so` and `:PackerSync`
 6. reopen nvim -> no error should occure anymore
