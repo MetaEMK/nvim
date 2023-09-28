@@ -29,3 +29,5 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set('n', '<leader>aa', '<cmd>AerialToggle!<CR>')
+
+vim.keymap.set('n', '<leader>ad', '<cmd>DBUIToggle<CR>')
