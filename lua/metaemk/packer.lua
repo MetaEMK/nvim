@@ -107,4 +107,6 @@ use {
 use 'ggandor/leap.nvim'
 use { 'numToStr/Comment.nvim' }
 
+use 'github/copilot.vim'
+
 end)
