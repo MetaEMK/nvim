@@ -31,3 +31,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set('n', '<leader>aa', '<cmd>AerialToggle!<CR>')
 
 vim.keymap.set('n', '<leader>ad', '<cmd>DBUIToggle<CR>')
+
+vim.keymap.set('n', '<leader>acd', '<cmd>Copilot disable<CR>')
+vim.keymap.set('n', '<leader>ace', '<cmd>Copilot enable<CR>')
