@@ -1,13 +1,11 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    tag = "v0.9.3",
     config = function()
         require("nvim-treesitter.configs").setup({
-            -- A list of parser names, or "all"
-            ensure_installed = {
-                "vimdoc", "javascript", "typescript", "c", "lua", "rust",
-                "jsdoc", "bash", "go"
-            },
+            -- A list of parser names, or all"
+            ensure_installed = { "go", "bash" },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
@@ -36,7 +34,7 @@ return {
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
+                files = { "src/parser.c", "src/scanner.c" },
                 branch = "master",
             },
         }

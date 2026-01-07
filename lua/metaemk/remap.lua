@@ -1,3 +1,22 @@
+local function lsp_references_without_test()
+    local params = vim.lsp.util.make_position_params()
+    vim.lsp.buf_request(0, "textDocument/references", params, function (err, result, ctx, config)
+        if err or not result then
+            return
+        end
+
+        local filtered_results = {}
+
+        for _, ref in ipairs(result) do
+            local fname = vim.uri_to_fname(ref.uri)
+            if not fname:match("_test%.%w+$") then
+                table.insert(filtered_results, ref)
+            end
+        end
+            vim.lsp.handlers["textDocument/references"](nil, filtered_results, ctx, config)
+    end)
+end
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>as", vim.cmd.SymbolsOutline)
@@ -27,7 +46,8 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>O")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end)
-vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end)
+vim.keymap.set("n", "<leader>vrr", function() lsp_references_without_test() end)
+vim.keymap.set("n", "<leader>vrt", function() vim.lsp.buf.references() end)
 vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
